@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Blackpink Area</title>
+    <style>
+        /* Giao diện Đen - Hồng đặc trưng của Blackpink */
+        body { background-color: #111; color: #ff99cc; font-family: sans-serif; text-align: center; padding: 20px; }
+        h1 { font-size: 3rem; margin-bottom: 5px; text-transform: uppercase; }
+        .line { width: 100px; height: 4px; background: #ff99cc; margin: 0 auto 30px auto; }
+        
+        /* Bố cục lưới hiển thị 4 thành viên */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+        
+        /* Thẻ thành viên */
+        .card { background: #222; border: 1px solid #ff99cc; border-radius: 10px; padding: 15px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); background: #333; }
+        .card img { width: 100%; height: 250px; object-fit: cover; border-radius: 5px; }
+        h3 { margin: 10px 0 5px; color: white; }
+        
+        /* Nút quay lại */
+        .back-btn { display: inline-block; margin-top: 40px; padding: 12px 24px; background: #ff99cc; color: #000; text-decoration: none; font-weight: bold; border-radius: 30px; }
+        .back-btn:hover { background: #fff; }
+    </style>
+</head>
+<body>
+
+    <h1>Blackpink</h1>
+    <div class="line"></div>
+    <p>Nhóm nhạc nữ toàn cầu với 4 mảnh ghép hoàn hảo</p>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="jisoo.jpg" alt="Jisoo">
+            <h3>Jisoo</h3>
+            <p>Visual - Lead Vocalist</p>
+        </div>
+
+        <div class="card">
+            <img src="jennie.jpg" alt="Jennie">
+            <h3>Jennie</h3>
+            <p>Main Rapper - Lead Vocalist</p>
+        </div>
+
+        <div class="card">
+            <img src="rose.jpg" alt="Rosé">
+            <h3>Rosé</h3>
+            <p>Main Vocalist - Lead Dancer</p>
+        </div>
+
+        <div class="card">
+            <img src="lisa.jpg" alt="Lisa">
+            <h3>Lisa</h3>
+            <p>Main Dancer - Lead Rapper</p>
+        </div>
+    </div>
+
+    <a href="Nguyen_Thi_Hong_Thu.html" class="back-btn">⬅ Quay lại trang Profile của Thư</a>
+
+</body>
+</html>
