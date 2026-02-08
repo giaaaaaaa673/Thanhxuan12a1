@@ -2,498 +2,134 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Thị Hồng Thư | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Giới thiệu bản thân</title>
     <style>
-.link-subpage {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(214, 51, 132, 0.1);
-    border: 2px dashed #d63384;
-    border-radius: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.link-subpage:hover {
-    background: rgba(214, 51, 132, 0.2);
-    transform: translateY(-5px);
-}
-
-.link-subpage p {
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #fff;
-}
-/* Thiết kế riêng cho phần Âm nhạc */
-.music-passion {
-    margin-top: 50px;
-    perspective: 1000px;
-}
-
-.kpop-card {
-    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
-    color: #fff;
-    border-radius: 30px;
-    padding: 40px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    border: 1px solid #333;
-}
-
-/* Hiệu ứng tia sáng hồng chạy ngầm */
-.kpop-card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(214, 51, 132, 0.1) 0%, transparent 70%);
-    animation: rotateGradient 10s linear infinite;
-}
-
-@keyframes rotateGradient {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.kpop-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    position: relative;
-    z-index: 1;
-}
-
-.kpop-title {
-    font-size: 2rem;
-    font-weight: 800;
-    background: linear-gradient(to right, #ff69b4, #fb48c4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-}
-
-.member-pill-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-    position: relative;
-    z-index: 1;
-}
-
-.member-pill {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(214, 51, 132, 0.4);
-    padding: 6px 18px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    color: #ffcce0;
-}
-
-.member-pill:hover {
-    background: #d63384;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
-}
-
-.dance-quote {
-    background: rgba(255, 255, 255, 0.05);
-    border-left: 4px solid #d63384;
-    padding: 20px;
-    border-radius: 0 15px 15px 0;
-    margin: 25px 0;
-    font-style: italic;
-    position: relative;
-    z-index: 1;
-}
-
-.spotify-hint {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-    color: #b3b3b3;
-    margin-top: 20px;
-}
-
-.btn-blackpink {
-    display: inline-block;
-    background: #d63384;
-    color: white !important;
-    padding: 14px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    border: none;
-    position: relative;
-    z-index: 1;
-}
-
-.btn-blackpink:hover {
-    background: white;
-    color: #000 !important;
-    transform: scale(1.05);
-}
-/* CSS cho lưới sách */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động chia cột */
-    gap: 25px; /* Khoảng cách giữa các sách */
-    margin-top: 30px;
-}
-
-.book-card {
-    background: #fffafa; /* Màu nền trắng pha chút hồng cực nhạt */
-    padding: 20px;
-    border-radius: 16px;
-    border: 1px solid var(--accent-pink); /* Viền hồng nhạt */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.book-card:hover {
-    transform: translateY(-8px); /* Hiệu ứng nổi lên khi di chuột */
-    box-shadow: 0 10px 25px rgba(214, 51, 132, 0.15);
-    border-color: var(--primary-pink);
-}
-
-.book-cover {
-    width: 140px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
-    margin-bottom: 15px;
-}
-
-.book-title {
-    color: var(--primary-pink);
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    min-height: 50px; /* Giúp tiêu đề thẳng hàng nhau */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.book-desc {
-    font-size: 0.95rem;
-    color: var(--light-text);
-    text-align: justify; /* Căn đều 2 bên cho gọn */
-    line-height: 1.5;
-}
-        :root {
-            --primary-pink: #d63384;
-            --soft-pink: #fff0f5;
-            --accent-pink: #ffcce0;
-            --dark-text: #2d3436;
-            --light-text: #636e72;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #7fffd4;
+            color: black;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--soft-pink); 
-            color: var(--dark-text); 
-            margin: 0; 
-            padding: 40px 20px;
-            line-height: 1.6;
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.85);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        .container { 
-            max-width: 900px; 
-            margin: 0 auto; 
-            background: white; 
-            padding: 50px; 
-            border-radius: 24px; 
-            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.1); 
+        h1, h2 {
+            text-align: center;
         }
 
-        .quote { 
-            background: linear-gradient(135deg, #fff0f5 0%, #ffe6f2 100%);
-            padding: 30px; 
-            text-align: center; 
-            font-style: italic; 
-            font-size: 1.3rem; 
-            border-radius: 16px; 
-            margin-bottom: 40px; 
-            border-left: 6px solid var(--primary-pink);
-            color: var(--primary-pink);
-            font-weight: 500;
+        .avatar {
+            text-align: center;
         }
 
-        .profile-section { 
-            display: flex; 
-            gap: 40px; 
-            align-items: flex-start; 
-            margin-bottom: 50px;
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid black;
         }
 
-        .avatar-container { flex-shrink: 0; }
-
-        .avatar { 
-            width: 280px; 
-            height: 280px; 
-            object-fit: cover; 
-            border-radius: 20px; 
-            box-shadow: 15px 15px 0px var(--accent-pink); 
-            transition: transform 0.3s ease;
+        ul {
+            line-height: 1.8;
         }
 
-        .avatar:hover { transform: translate(-5px, -5px); }
-
-        .info-list { list-style: none; padding: 0; }
-        .info-list li { font-size: 1.1rem; margin-bottom: 12px; color: var(--light-text); }
-        .info-list strong { color: var(--primary-pink); display: inline-block; width: 120px; }
-
-        h2 { 
-            color: var(--dark-text); 
-            font-size: 1.8rem;
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        /* Sở thích */
+        .hobby-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        h2::after { content: ""; flex: 1; height: 2px; background: var(--accent-pink); }
-        h3 { color: var(--primary-pink); margin-top: 25px; }
-        .media-content { margin: 20px 0; }
-        
-        .book-img { 
-            width: 180px; 
-            border-radius: 12px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .hobby {
+            text-align: center;
         }
 
-        /* Ảnh Blindbox to hơn một chút để nổi bật */
-        .blindbox-img {
-            width: 240px;
-            border-radius: 16px;
-            border: 3px dashed var(--accent-pink);
-            padding: 5px;
+        .hobby img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid black;
         }
 
-        video { width: 100%; max-width: 550px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-
-        .btn-link { 
-            display: inline-block; 
-            background-color: #000; 
-            color: #fff; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: 600; 
-            margin-top: 15px; 
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        /* Liên lạc */
+        .contact a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            background: #98fb98;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            width: 60%;
+            text-align: center;
         }
 
-        .btn-link:hover { background-color: #fff; color: #000; border-color: #000; }
-
-        .skill-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary-pink);
-        }
-
-        .contact { display: flex; gap: 20px; margin-top: 30px; }
-        .contact a { 
-            text-decoration: none; color: var(--dark-text); font-weight: 700; 
-            padding: 10px 20px; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s;
-        }
-        .contact a:hover { background: var(--primary-pink); color: white; border-color: var(--primary-pink); }
-
-        @media (max-width: 768px) {
-            .profile-section { flex-direction: column; align-items: center; text-align: center; }
-            .info-list li { text-align: left; }
-            .avatar { width: 220px; height: 220px; }
+        .contact a:hover {
+            background: #66cdaa;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="quote">
-            "Bạn chỉ sống một lần duy nhất, nhưng nếu bạn làm đúng thì chỉ một lần là đủ."
+<div class="container">
+
+    <div class="avatar">
+        <img src="avatar.jpg" alt="Ảnh đại diện">
+    </div>
+
+    <h1>Nguyễn Xuân</h1>
+
+    <h2> Thông tin cá nhân</h2>
+    <ul>
+        <li>Họ và tên: Nguyễn Thị Thanh Xuân</li>
+        <li>Tuổi: 17</li>
+        <li>Lớp: 12A1</li>
+        <li>Trường: THPT Tây Sơn</li>
+    </ul>
+
+    <h2>Sở thích</h2>
+    <div class="hobby-list">
+        <div class="hobby">
+            <img src="music.jpg" alt="Nghe nhạc">
+            <p>Nghe nhạc</p>
         </div>
 
-        <h2>👋 Giới thiệu bản thân</h2>
-        <div class="profile-section">
-            <div class="avatar-container">
-                <img src="avatar.jpg" alt="Nguyễn Thị Hồng Thư" class="avatar">
-            </div>
-            <div class="info-content">
-                <ul class="info-list">
-                    <li><strong>Họ và tên:</strong> Nguyễn Thị Hồng Thư</li>
-                    <li><strong>Ngày sinh:</strong> 15/10/2008</li>
-                    <li><strong>Học vấn:</strong> Lớp 12A1</li>
-                    <li><strong>Trường:</strong> THPT Tây Sơn</li>
-                </ul>
-                <p style="color: var(--light-text); font-style: italic; margin-top: 20px;">
-                    Một cô gái Gen Z đầy năng lượng, luôn tin vào sự tử tế và sức mạnh của việc thấu hiểu bản thân.
-                </p>
-            </div>
+        <div class="hobby">
+            <img src="tech.jpg" alt="Chơi game">
+            <p>Chơi game</p>
         </div>
 
-        <h2>💖 Thế giới cá nhân</h2>
-        
-      <h3>1. Góc đọc sách & Chữa lành</h3>
-<p>
-    📚 Đối với mình, những trang sách là nơi trú ẩn yên bình nhất. Đọc sách không chỉ để tiếp thu kiến thức, mà là hành trình để thấu hiểu bản thân và nhìn nhận thế giới bằng đôi mắt bao dung hơn. Dưới đây là 3 cuốn sách đã thay đổi tư duy của mình:
-</p>
+        <div class="hobby">
+            <img src="study.jpg" alt="Học tập">
+            <p>Học tập</p>
+        </div>
 
-<div class="book-grid">
-    <div class="book-card">
-        <img src="book1.jpg" alt="The Let Them Theory" class="book-cover">
-        <div class="book-title">The Let Them Theory</div>
-        <div class="book-desc">
-            Cuốn sách "gối đầu giường" giúp mình học cách buông bỏ sự kiểm soát. Thông điệp "Let them" (Kệ họ) nhắc nhở mình rằng: ta không thể thay đổi người khác, nhưng ta có thể chọn cách phản ứng để giữ lấy sự bình yên trong tâm hồn.
+        <div class="hobby">
+            <img src="sport.jpg" alt="Thể thao">
+            <p>Thể thao</p>
         </div>
     </div>
 
-    <div class="book-card">
-        <img src="book2.jpg" alt="Cây Cam Ngọt Của Tôi" class="book-cover">
-        <div class="book-title">Cây Cam Ngọt Của Tôi</div>
-        <div class="book-desc">
-            Câu chuyện về chú bé Zezé đã lấy đi của mình rất nhiều nước mắt. Cuốn sách dạy mình về sự trắc ẩn, nỗi đau của sự trưởng thành và vẻ đẹp của những tâm hồn nhạy cảm. Một tác phẩm khiến trái tim mình biết rung động sâu sắc hơn.
-        </div>
+    <h2>📞 Thông tin liên lạc</h2>
+    <div class="contact">
+        <a href="https://www.facebook.com/share/1DeJq4Q6ND/?mibextid=wwXIfr" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/thxnau_?igsh=ZDczdGJ6c3p1YXBl&utm_source=qr" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@xuanndayroi?_r=1&_t=ZS-93iLRGfD1lp" target="_blank">TikTok</a>
+        <a href="mailto:example@gmail.com">Email</a>
     </div>
 
-    <div class="book-card">
-        <img src="book3.jpg" alt="Nhà Giả Kim" class="book-cover">
-        <div class="book-title">Nhà Giả Kim</div>
-        <div class="book-desc">
-            "Khi bạn khao khát một điều gì đó, cả vũ trụ sẽ hợp lực giúp bạn đạt được nó." Cuốn sách này là nguồn cảm hứng lớn để mình dám ước mơ và kiên trì theo đuổi con đường riêng, dù phía trước có bao nhiêu thử thách.
-        </div>
-    </div>
 </div>
-
-        
-<h3>2. Sưu tầm Blindbox – Niềm vui từ sự bất ngờ</h3>
-        <p>✨ Có một kiểu hạnh phúc mang tên "unboxing". Mình yêu cảm giác hồi hộp khi cầm trên tay một chiếc hộp bí ẩn, chờ đợi khoảnh khắc được gặp gỡ những nhân vật đáng yêu như <strong>Labubu, Skullpanda hay Molly</strong>. Với mình, đây không chỉ là sưu tầm, mà là cách tìm kiếm những niềm vui nhỏ bé và may mắn bất ngờ mỗi ngày.</p>
-        <div class="media-content">
-            <img src="blindbox.jpg" alt="Bộ sưu tập Blindbox của Thư" class="blindbox-img">
-        </div>
-
-        <h3>3. Cân bằng cuộc sống</h3>
-        <p>🛍️ Với mình, việc săn sale hay mua sắm không đơn thuần là chi tiêu, mà là cách mình tận hưởng thành quả sau những giờ học tập căng thẳng tại trường.</p>
-    <h2>🎬 Thế giới Hoạt hình đầy màu sắc</h2>
-<p>
-    Đối với mình, hoạt hình không chỉ là giải trí mà còn là những thước phim chứa đựng bài học cuộc sống và kỉ niệm tuổi thơ vô giá.
-</p>
-
-<div class="video-card">
-    <h3 style="margin-top: 0; color: #0056b3;">🕵️‍♂️ 1. Thám tử lừng danh Conan</h3>
-    <video controls class="custom-video">
-        <source src="conan.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ thẻ video này.
-    </video>
-    <div class="book-desc">
-        <p>
-<strong>Thám tử lừng danh Conan</strong> là bộ phim trinh thám đã gắn liền với mình từ những ngày nhỏ. Mình luôn bị lôi cuốn bởi những vụ án hóc búa, tư duy logic nhạy bén của chàng thám tử teo nhỏ Edogawa Conan và hành trình bền bỉ đi tìm sự thật trước Tổ chức Áo đen.
-            </p>
-            <strong>"Sự thật luôn chỉ có một!"</strong> – Câu nói kinh điển này đã nuôi dưỡng trong mình khả năng quan sát và tư duy logic ngay từ nhỏ. <em>Thám tử lừng danh Conan</em> không chỉ hấp dẫn bởi những vụ án hóc búa, mà còn là câu chuyện về lòng dũng cảm, tình bạn bền chặt và tinh thần bảo vệ lẽ phải. Mỗi tập phim là một lần mình được cùng thám tử nhí phá giải những bí ẩn cuộc đời.
-        </p>
-    </div>
-</div>
-
-<div class="video-card">
-    <h3 style="margin-top: 0; color: #ff7f50;">🌸 2. Nhóc Maruko (Chibi Maruko-chan)</h3>
-    <video controls class="custom-video">
-        <source src="maruko.mp4" type="video/mp4">
-        Trình duyệt của bạn không hỗ trợ thẻ video này.
-    </video>
-    <div class="book-desc">
-        <p>
-            Nếu Conan là những giây phút nghẹt thở thì <strong>Nhóc Maruko</strong> lại là liều thuốc chữa lành cho tâm hồn mình. Những câu chuyện đời thường quanh cô bé lớp 3 Maruko cùng gia đình và bạn bè luôn mang đến tiếng cười nhẹ nhàng và cảm giác ấm áp. Xem Maruko, mình như thấy lại chính mình trong những năm tháng thơ ngây, học cách yêu thương những điều giản đơn nhất trong cuộc sống hàng ngày.
-            </p>
-    </div>
-<section class="music-passion">
-    <h2>🎶 Giai điệu & Chuyển động</h2>
-    <p>
-        Âm nhạc là nguồn năng lượng bất tận giúp mình giải tỏa căng thẳng. Không chỉ nghe, mình còn bị cuốn hút bởi những vũ đạo mạnh mẽ và thần thái chuyên nghiệp.
-    </p>
-
-    <div class="kpop-card">
-        <div class="kpop-header">
-            <h3 class="kpop-title">BLACKPINK In Your Area!</h3>
-            <span style="font-size: 1.5rem;">🖤💗</span>
-        </div>
-
-        <p style="position: relative; z-index: 1; color: #e0e0e0;">
-            <strong>BLACKPINK</strong>(tiếng Hàn: 블랙핑크; Romaja: Beullaekpingkeu, cách điệu bằng việc viết hoa tất cả các chữ cái hoặc BLɅϽKPIИK) là một nhóm nhạc nữ Hàn Quốc do công ty YG Entertainment thành lập. Nhóm gồm 4 thành viên. Blackpink không chỉ được nhiều ấn phẩm truyền thông ca ngợi là "nhóm nhạc nữ lớn nhất thế giới" mà còn được công nhận là một trong những thế lực hàng đầu của làn sóng Hallyu cũng như là đại diện tiêu biểu cho concept “girl crush” trong K-pop – một phong cách đề cao sự tự tin bản thân và trao quyền cho phụ nữ.
-        </p>
-
-        <div class="member-pill-container">
-            <span class="member-pill">JISOO</span>
-            <span class="member-pill">JENNIE</span>
-            <span class="member-pill">ROSÉ</span>
-            <span class="member-pill">LISA</span>
-        </div>
-
-  <div class="link-subpage">
-    
-    <a href="blackpink.html" class="btn-blackpink" style="display: inline-block; background: #fff; color: #d63384 !important;">
-        Khám phá về BLACKPINK ➔
-    </a>
-</div>
-
-        <div class="dance-quote">
-            "Những năm gần đây, Blackpink liên tục đứng đầu trong danh sách Người nổi tiếng quyền lực của Forbes Korea và được cựu Tổng thống Hàn Quốc Moon Jae-in khen ngợi vì vai trò truyền bá văn hóa K-pop và Hàn Quốc trên toàn cầu. Nhóm đóng vai trò là nguồn cảm hứng cho vô số phụ nữ trên toàn thế giới và tự hào là một trong những fandom lớn nhất từ ​​​​trước đến nay. "
-        </div>
-
-        <p style="font-size: 0.9rem; color: #ccc; position: relative; z-index: 1;">
-            Dù là giọng hát nội lực, kỹ năng rap đỉnh cao hay những bước nhảy thần sầu, 4 cô gái luôn là phiên bản hoàn hảo nhất trong lòng mình.
-        </p>
-
-        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-            <a href="https://www.youtube.com/@BLACKPINK" target="_blank" class="btn-blackpink">
-                Khám phá âm nhạc ➔
-            </a>
-            <div class="spotify-hint">
-                <span style="color: #1DB954;">●</span> Now Streaming on Spotify
-
-
-            </div>
-        </div>
-    </div>
-
-</section>                  
-
-        
-
-        <h2>🌟 Sở trường </h2>
-        <div class="skill-item">
-            <strong>🤝 Kỹ năng làm việc nhóm:</strong> Luôn đóng vai trò là sợi dây kết nối, hỗ trợ đồng đội và hướng tới mục tiêu chung.
-        </div>
-        <div class="skill-item">
-            <strong>🗣️ Giao tiếp & Thuyết phục:</strong> Tự tin trình bày ý tưởng, biết lắng nghe và tạo ra sức ảnh hưởng tích cực.
-        </div>
-
-        <h2>📞 Kết nối với Thư</h2>
-        <div class="contact">
-            <a href="https://www.facebook.com/hthufu.25?locale=vi_VN" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/_hthufu/" target="_blank">Instagram</a>
-        </div>
-    </div>
 
 </body>
 </html>
