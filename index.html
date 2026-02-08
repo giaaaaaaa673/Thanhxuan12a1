@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu bản thân</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #7fffd4;
+            color: black;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.85);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .avatar {
+            text-align: center;
+        }
+
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid black;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        /* Sở thích */
+        .hobby-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hobby {
+            text-align: center;
+        }
+
+        .hobby img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+
+        /* Liên lạc */
+        .contact a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            background: #98fb98;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            width: 60%;
+            text-align: center;
+        }
+
+        .contact a:hover {
+            background: #66cdaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="avatar">
+        <img src="avatar.jpg" alt="Ảnh đại diện">
+    </div>
+
+    <h1>Nguyễn Xuân</h1>
+
+    <h2> Thông tin cá nhân</h2>
+    <ul>
+        <li>Họ và tên: Nguyễn Thị Thanh Xuân</li>
+        <li>Tuổi: 17</li>
+        <li>Lớp: 12A1</li>
+        <li>Trường: THPT Tây Sơn</li>
+    </ul>
+
+    <h2>Sở thích</h2>
+    <div class="hobby-list">
+        <div class="hobby">
+            <img src="music.jpg" alt="Nghe nhạc">
+            <p>Nghe nhạc</p>
+        </div>
+
+        <div class="hobby">
+            <img src="tech.jpg" alt="Chơi game">
+            <p>Chơi game</p>
+        </div>
+
+        <div class="hobby">
+            <img src="study.jpg" alt="Học tập">
+            <p>Học tập</p>
+        </div>
+
+        <div class="hobby">
+            <img src="sport.jpg" alt="Thể thao">
+            <p>Thể thao</p>
+        </div>
+    </div>
+
+    <h2>📞 Thông tin liên lạc</h2>
+    <div class="contact">
+        <a href="https://www.facebook.com/share/1DeJq4Q6ND/?mibextid=wwXIfr" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/thxnau_?igsh=ZDczdGJ6c3p1YXBl&utm_source=qr" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@xuanndayroi?_r=1&_t=ZS-93iLRGfD1lp" target="_blank">TikTok</a>
+        <a href="mailto:example@gmail.com">Email</a>
+    </div>
+
+</div>
+
+</body>
+</html>
